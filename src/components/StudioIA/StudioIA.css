@@ -1,0 +1,239 @@
+.studio {
+  padding: 100px 0;
+  background-color: #f8f9fa;
+}
+
+.studio__header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+
+.studio__label {
+  display: inline-block;
+  padding: 6px 16px;
+  background-color: rgba(29, 123, 191, 0.1);
+  color: #1d7bbf;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.studio__title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: #0e3b6c;
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+
+.studio__desc {
+  color: #4a5568;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.studio__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.studio__input-card,
+.studio__output-card {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  min-height: 400px;
+}
+
+.studio__form-group {
+  margin-bottom: 24px;
+}
+
+.studio__form-group label {
+  display: block;
+  font-weight: 600;
+  color: #0e3b6c;
+  margin-bottom: 12px;
+}
+
+.studio__form-group textarea {
+  width: 100%;
+  min-height: 150px;
+  padding: 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+  resize: vertical;
+}
+
+.studio__form-group textarea:focus {
+  outline: none;
+  border-color: #1d7bbf;
+}
+
+.studio__submit {
+  width: 100%;
+  padding: 16px;
+  background-color: #1d7bbf;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.studio__submit:hover:not(:disabled) {
+  background-color: #0e3b6c;
+  transform: translateY(-2px);
+}
+
+.studio__submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.studio__placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #a0aec0;
+  text-align: center;
+  padding-top: 60px;
+}
+
+.studio__placeholder-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  opacity: 0.5;
+}
+
+.studio__agents h3 {
+  color: #0e3b6c;
+  margin-bottom: 24px;
+  border-bottom: 2px solid #f8f9fa;
+  padding-bottom: 12px;
+}
+
+.studio__steps {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.studio__step {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  border-radius: 12px;
+  background: #f8f9fa;
+  transition: all 0.3s;
+}
+
+.studio__step--processing {
+  background: rgba(29, 123, 191, 0.05);
+  border-left: 4px solid #1d7bbf;
+}
+
+.studio__step--completed {
+  background: rgba(46, 204, 113, 0.05);
+}
+
+.studio__step-icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #e2e8f0;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.studio__step--completed .studio__step-icon {
+  background: #2ecc71;
+  color: white;
+}
+
+.studio__step--processing .studio__step-icon {
+  background: #1d7bbf;
+}
+
+.studio__step-info h4 {
+  margin: 0 0 4px;
+  color: #0e3b6c;
+}
+
+.studio__step-info p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #4a5568;
+}
+
+.studio__loader {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #fff;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: studio-spin 0.8s linear infinite;
+}
+
+@keyframes studio-spin {
+  to { transform: rotate(360deg); }
+}
+
+.studio__result {
+  margin-top: 30px;
+}
+
+.studio__result h3 {
+  color: #0e3b6c;
+  margin-bottom: 16px;
+}
+
+.studio__video-container {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: #000;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.studio__video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.studio__download {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #0e3b6c;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.3s;
+}
+
+.studio__download:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 992px) {
+  .studio__grid {
+    grid-template-columns: 1fr;
+  }
+}

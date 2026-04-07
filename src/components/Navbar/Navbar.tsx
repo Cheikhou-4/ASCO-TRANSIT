@@ -6,6 +6,7 @@ const navLinks = [
   { label: 'Services', href: '#services' },
   { label: 'Expertise', href: '#expertise' },
   { label: 'Formation', href: '#formation' },
+  { label: 'Studio IA', href: '#studio' },
   { label: 'Pourquoi nous', href: '#whyus' },
   { label: 'Contact', href: '#contact' },
 ];
